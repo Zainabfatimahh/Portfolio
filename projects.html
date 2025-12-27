@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projects | Zainab Fatimah</title>
+
+  <!-- Font Awesome -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+  />
+
+  <style>
+    body {
+      background: #01080a;
+      color: white;
+      font-family: Arial, sans-serif;
+      margin: 0;
+    }
+
+    header {
+      background: #000;
+      padding: 15px 60px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header h1 {
+      font-size: 20px;
+    }
+
+    header a {
+      color: white;
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    /* Projects Grid */
+    .projects-section {
+      padding: 60px;
+    }
+
+    .projects-section h2 {
+      margin-bottom: 10px;
+    }
+
+    .projects-section p {
+      color: #aaa;
+      margin-bottom: 40px;
+    }
+
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr); /* 2 per row */
+      gap: 30px;
+    }
+
+    .project-folder {
+  text-decoration: none;
+  color: white;
+  display: block;
+}
+
+    .project-folder:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 10px 30px rgba(46, 204, 64, 0.25);
+    }
+
+    .project-folder i {
+      font-size: 40px;
+      color: #2ecc40;
+      margin-bottom: 15px;
+    }
+
+    .project-folder h3 {
+      margin-bottom: 8px;
+      font-size: 18px;
+    }
+
+    .project-folder span {
+      font-size: 13px;
+      color: #aaa;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .projects-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h1>Projects</h1>
+  <a href="index.html">← Back to Home</a>
+</header>
+
+<section class="projects-section">
+  <h2>Graphic Design Work</h2>
+  <p>Click a folder to view related design projects</p>
+
+  <div class="projects-grid">
+
+    <a href="logos.html" class="project-folder">
+        <i class="fas fa-folder-open"></i>
+        <h3>Logos</h3>
+        <span>Brand identity designs</span>
+      </a>
+      
+
+      <a href="socialmedia.html" class="project-folder">
+        <i class="fas fa-folder-open"></i>
+        <h3>Social Media posts</h3>
+        <span>Brand identity designs</span>
+      </a>
+
+    
+      <a href="foodposts.html" class="project-folder">
+        <i class="fas fa-folder-open"></i>
+        <h3>Food-Cafe Posts</h3>
+        <span>Brand identity designs</span>
+      </a>
+
+
+      <a href="brandings.html" class="project-folder">
+        <i class="fas fa-folder-open"></i>
+        <h3>Matcha Cafe Branding</h3>
+        <span>Brand identity designs</span>
+      </a>
+
+      <a href="Branding.html" class="project-folder">
+        <i class="fas fa-folder-open"></i>
+        <h3>Cafe Shop Branding</h3>
+        <span>Brand identity designs</span>
+      </a>
+
+   
+      <a href="realeastate.html" class="project-folder">
+        <i class="fas fa-folder-open"></i>
+        <h3>Real Estate</h3>
+        <span>Posts & Card designs</span>
+      </a>
+
+      <h2>Frontend Development Work</h2>
+      <a href="PinkCal.html" class="project-folder">
+        <i class="fas fa-folder-open"></i>
+        <h3>PinkCal</h3>
+        <span>Pink-themed Calculator built with ReactNative using expo.</span>
+      </a>
+
+      <a href="WeatherCheaker.html" class="project-folder">
+        <i class="fas fa-folder-open"></i>
+        <h3>WeatherChecker</h3>
+        <span>Weather Cheaker </span>
+      </a>
+      
+      <a href="PortfolioW.html" class="project-folder">
+        <i class="fas fa-folder-open"></i>
+        <h3>Portfolio Website</h3>
+        <span>My personal portfolio website that reflects all my skills</span>
+      </a>
+      
+  </div>
+</section>
+
+</body>
+</html>

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | Projects</title>
+
+  <style>
+    body {
+      background: #01080a;
+      color: white;
+      font-family: Arial, sans-serif;
+      margin: 0;
+    }
+
+    header {
+      background: #000;
+      padding: 15px 60px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header a {
+      color: white;
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    main {
+      padding: 60px;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    p {
+      color: #aaa;
+      margin-bottom: 30px;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    label {
+      margin-bottom: 6px;
+      font-weight: bold;
+    }
+
+    input, textarea {
+      margin-bottom: 18px;
+      padding: 10px;
+      border: 1px solid #2ecc40;
+      border-radius: 5px;
+      background: #111;
+      color: white;
+      font-size: 14px;
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 120px;
+    }
+
+    button {
+      padding: 12px;
+      background: #2ecc40;
+      border: none;
+      border-radius: 5px;
+      color: #000;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    button:hover {
+      background: #27ae38;
+    }
+
+    .success {
+      margin-top: 20px;
+      color: #2ecc40;
+      display: none;
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h2>Contact</h2>
+  <a href="index.html">← Back to Home</a>
+</header>
+
+<main>
+  <p>Fill the form below and your message will come directly to my email.</p>
+
+  <form id="contact-form">
+    <label>Name</label>
+    <input type="text" name="name" placeholder="Your name" required>
+
+    <label>Email</label>
+    <input type="email" name="email" placeholder="Your email address" required>
+
+    <label>Message</label>
+    <textarea name="message" placeholder="Write your message here..." required></textarea>
+
+    <button type="submit">Send Message</button>
+  </form>
+
+  <div class="success" id="success-msg">
+    ✅ Message sent successfully!
+  </div>
+</main>
+
+<!-- EMAILJS SCRIPT -->
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+
+<script>
+  (function() {
+    emailjs.init("Z1qgFAZF-Q5DU9tRn"); // 🔴 replace
+  })();
+
+  document.getElementById("contact-form").addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    emailjs.sendForm(
+      "service_9lndkz7",   // 🔴 replace
+      "template_megit9x",  // 🔴 replace
+      this
+    ).then(function() {
+        document.getElementById("success-msg").style.display = "block";
+        document.getElementById("contact-form").reset();
+      }, function(error) {
+        alert("Failed to send message. Try again.");
+        console.log(error);
+      });
+  });
+</script>
+
+</body>
+</html>

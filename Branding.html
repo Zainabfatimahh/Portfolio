@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Branding| Projects</title>
+
+  <style>
+    body {
+      background: #01080a;
+      color: white;
+      font-family: Arial, sans-serif;
+      margin: 0;
+    }
+
+    header {
+      background: #000;
+      padding: 15px 60px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header a {
+      color: white;
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    .gallery {
+      padding: 60px;
+    }
+
+    .gallery h2 {
+      margin-bottom: 10px;
+    }
+
+    .gallery p {
+      color: #aaa;
+      margin-bottom: 40px;
+    }
+
+    .image-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+    }
+
+    .image-box {
+      border: 1px solid #2ecc40;
+      border-radius: 10px;
+      overflow: hidden;
+      transition: transform 0.3s;
+    }
+
+    .image-box:hover {
+      transform: scale(1.03);
+    }
+
+    .image-box img {
+      width: 100%;
+      aspect-ratio: 16 / 9; /* horizontal rectangle */
+      object-fit: cover;
+      display: block;
+      border-radius: 5px;
+    }
+
+    @media (max-width: 900px) {
+      .image-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 500px) {
+      .image-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h2>Coffee Shop Branding</h2>
+  <a href="projects.html">← Back to Projects</a>
+</header>
+
+<section class="gallery">
+  <p>Coffee Shop Branding "COFFEE AND BREW"</p>
+
+  <div class="image-grid">
+    <div class="image-box">
+      <img src="branding/1.png" alt="Logo 1">
+    </div>
+    <div class="image-box">
+      <img src="branding/2.png" alt="Logo 2">
+    </div>
+    <div class="image-box">
+      <img src="branding/3.png" alt="Logo 3">
+    </div>
+    <div class="image-box">
+      <img src="branding/4.png" alt="Logo 4">
+    </div>
+    <div class="image-box">
+      <img src="branding/5.png" alt="Logo 5">
+    </div>
+    <div class="image-box">
+      <img src="branding/6.png" alt="Logo 6">
+    </div>
+  </div>
+</section>
+
+</body>
+</html>
